@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Domain Pricing</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  .buy_containt{
+    margin: auto;
+    text-align: center;
+  }
+  h2{
+    margin-top: 40px;
+    font-size: 35px;
+    margin-bottom: 50px;
+  }
+  .input{
+    width:  50%;
+    border-radius: 5px;
+    border: 2px solid  #a7a6a6;
+    height: 25px;
+    margin-bottom: 50px;
+    font-size: 17px;
+    padding: 10px;
+  }
+  table {
+    width:  80%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin:auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    
+  }
+  .Offer{
+    background-color: rgb(242, 155, 104);font-size: 11px;border-radius: 10px;padding: 2px 4px 2px 4px;color: white;
+  }
+  th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+
+  th {
+    background-color: #eeebea;
+    color: #3a3a3a;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 10px;
+  }
+  .selectedDomain{
+    width: 70%;
+    padding: 10px;font-size: 17px;
+    border-radius: 5px;border: 2px solid rgb(176, 174, 174);
+  }
+  #CONTINUE{
+    width: 74%;padding: 10px;font-size: 17px;border-radius: 5px;
+    border: none;background-color: rgb(220, 132, 100);color: white;cursor: pointer;margin-bottom: 25px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: rgb(208, 98, 42);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  button{
+    padding: 8px 15px ;font-size: 15px;
+    background-color: white;
+    border: 1px  solid rgb(169, 169, 169);color: rgb(208, 100, 24);border-radius: 2px;
+    cursor: pointer;
+  }
+  button:hover{
+    border: 1px solid rgb(237, 134, 92) ;
+  }
+
+  .one{
+    font-size: 13px;color: rgb(14, 167, 31);
+  }
+
+
+
+  @media screen and (max-width: 768px) {
+    .input{
+    width:  77%;
+    
+    border-radius: 5px;
+    border: 2px solid  #a7a6a6;
+    height: 25px;
+    margin-bottom: 50px;
+    font-size: 17px;
+    padding: 10px;
+  }
+  h2{
+    margin-top: 40px;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  table {
+    width:  85%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin:auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    
+  }
+  .Offer{
+    background-color: rgb(242, 155, 104);font-size: 10px;border-radius: 10px;padding: 2px 4px 2px 4px;color: white;
+  }
+  th, td {
+    padding: 11px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    display: block;
+    
+  }
+  
+
+  th {
+    background-color: #fff1ed;
+    color: #3a3a3a;display: none;
+    
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 50% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 78%;
+    border-radius: 10px;
+  }
+  .selectedDomain{
+    width: 90%;
+    padding: 10px;font-size: 17px;
+    border-radius: 5px;border: 2px solid rgb(176, 174, 174);
+  }
+  #CONTINUE{
+    width: 97%;padding: 11px;font-size: 17px;border-radius: 5px;
+    border: none;background-color: rgb(220, 132, 100);color: white;cursor: pointer;margin-bottom: 25px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: rgb(208, 98, 42);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  button{
+    padding: 8px 7px ;font-size: 13px;
+    background-color: white;
+    border: 1px  solid rgb(169, 169, 169);color: rgb(208, 100, 24);border-radius: 2px;
+    cursor: pointer;
+  }
+  }
+</style>
+</head>
+<body>
+<div class="buy_containt">
+    <h2>Achetez un domaine facilement</h2>
+
+    <input type="text" id="searchInput" placeholder="Trouver un domaine..." class="input">
+    <table id="pricingTable">
+    <tr>
+        <th>Nom de domaine</th>
+        <th>(1) montant</th>
+        <th>(2) montant</th>
+        <th>Select</th>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> com</td>
+        <td>9.000F/ <span class="one">12 mois</span></td>
+        <td>15.206F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.com')">Acheter</button></td>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> org</td>
+        <td>9.700F/ <span class="one">12 mois</span></td>
+        <td>18.450F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.org')">Acheter</button></td>
+    </tr>
+
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> shop</td>
+        <td>994F/ <span class="one">12 mois</span></td>
+        <td>28.098F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.shop')">Acheter</button></td>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> business</td>
+        <td>7.130F/ <span class="one">12 mois</span></td>
+        <td>15.591F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.business')">Acheter</button></td>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> site</td>
+        <td>1.094F/ <span class="one">12 mois</span></td>
+        <td>26.625F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.site')">Acheter</button></td>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> info</td>
+        <td>4.968F/ <span class="one">12 mois</span></td>
+        <td>22.099F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.info')">Acheter</button></td>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> net</td>
+        <td>12.839F/ <span class="one">12 mois</span></td>
+        <td>19.950F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.net')">Acheter</button></td>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> biz</td>
+        <td>12.616F/ <span class="one">12 mois</span></td>
+        <td>25.936F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.biz')">Acheter</button></td>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> pro</td>
+        <td>4.279F/ <span class="one">12 mois</span></td>
+        <td>22.301F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.pro')">Acheter</button></td>
+    </tr>
+    <tr>
+        <td style="font-weight: 700;font-size: 18px;"><span style="font-size: 30px;color: rgb(204, 65, 23);">.</span> cloud</td>
+        <td>10.894F/ <span class="one">12 mois</span></td>
+        <td>16.691F/ <span class="Offer">2 ANS %</span></td>
+        <td><button onclick="showPopup('Votre entreprise.cloud')">Acheter</button></td>
+    </tr>
+    </table>
+
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Vérification</h3>
+        <form id="domainForm">
+        <input type="text" id="selectedDomain" class="selectedDomain"><br><br>
+        <input type="text" placeholder="Telephone (+)" class="selectedDomain"><br><br>
+        
+        <input type="submit" value="CONTINUE" id="CONTINUE">
+        </form>
+    </div>
+    </div>
+</div>
+
+<script>
+  function showPopup(domain) {
+    document.getElementById("selectedDomain").value = domain;
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  // Close modal if clicked outside of it
+  window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  // Search functionality
+  document.getElementById("searchInput").addEventListener("keyup", function() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("pricingTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
