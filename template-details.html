@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Template Details</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="templates.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+          <img src="logo3.png" alt="" width="150">
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">WebGlory</a></li>
+            <li><a href="#"><i class="fa-solid fa-star fa-flip" style="color: #f5d014;"></i> Premium</a></li>
+            <li><a href="#">Sign in</a></li>
+            <li id="hire"><a href="#"><button class="hire-btn">Hire us</button></a></li>
+          </ul>
+        </div>
+      </nav>
+<div class="temps-grid">
+    <div class="container-details">
+        <h2>Template Details</h2>
+        <div class="template-details">
+            <img src="" alt="Template Image" id="templateImage" class="details-temps-img">
+            <div style="display: flex;align-items: center;justify-content: space-between;">
+            <h3 id="templateName"></h3>
+            <a href="#" id="templatePreview"><span style="float: right;color: #074dc5;font-weight: 500;"><i class="fa-regular fa-eye" style="color: #797a7c;"></i> Live Preview</span></a>
+            </div>
+            <p id="" style="font-size: 20px;font-weight: 500;"></p>
+            <h3 ></h3>
+        </div>
+
+        <!-- mobile -->
+        <!-- mobile end -->
+
+        <div class="description">
+            <h3>Description of the template</h3>
+            <h1 id="templateDescription">🎊 Bootstrap 5 version is here! 🎊</h1>
+            <p id="templateDescriptionp"></p>
+        </div>
+
+        <div class="list">
+            <div class="description">
+              <h3>List of pages included in Elixir</h3>
+              <p>There are more than 15 pages and 30+ sections included in this template. Not all are necessary for one, but all the individual section is necessary for many of you. Still, if you are not satisfied, please comment here. We will design and release a new version and notify you.</p>
+            </div>
+            <ul>
+                <li>Home – with Slider</li>
+                <li>Home – with Static Image</li>
+                <li>Service Page</li>
+                <li>About Us page</li>
+                <li>404 Page</li>
+                <li>Blank Page</li>
+                <li>Login Page</li>
+                <li>Registration Page</li>
+                <li>Contact Us</li>
+                
+            </ul>
+        </div>
+
+        <div>
+            <hr>
+            <h3>Support</h3>
+            <p>Need support? Through us an email at support@themewagon.com we’re always glad to help you 🙂</p>
+        </div>
+
+        <div class="social">
+            <i class="fa-brands fa-instagram" style="color: #303030;"></i>
+            <i class="fa-brands fa-facebook-f" style="color: #303030;"></i>
+            <i class="fa-brands fa-x-twitter" style="color: #303030;"></i>
+        </div>
+    </div>
+
+    <div class="license-side" >
+        <div class="license-border">
+            <div>
+                <p style="font-weight: 600;color: #837c7c;">License Options <span style="float:right;color: rgb(87, 87, 242);font-weight: 500;font-size: 15px;cursor: pointer;">Full details <i class="fa-solid fa-angle-right" style="color: #074dc5;"></i></span></p>
+                <hr>
+            </div>
+            <!-- License options will be dynamically generated here -->
+
+            <div class="options">
+                <input type="radio" id="Standard" class="radio-input">
+                <label for="Standard">Standard<br><span style="color: rgb(87, 87, 87);font-weight: 400;font-size: 16px;">For one project</span></label>
+                <span class="checkmark"></span>
+                <div class="options-price">
+                    <label for="" id="templatePrice"></label>
+                </div>
+            </div>
+            <div class="options">
+                <input type="radio" id="Multisite" class="radio-input">
+                <label for="Multisite">Multisite<br><span style="color: rgb(87, 87, 87);font-weight: 400;font-size: 16px;">For one project</span></label>
+                <div class="options-price">
+                    <label for="">$49</label>
+                </div>
+            </div>
+            <div class="options">
+                <input type="radio" id="Customed" class="radio-input">
+                <label for="Customed">Customed<br><span style="color: rgb(87, 87, 87);font-weight: 400;font-size: 16px;">For one project</span></label>
+                <div class="options-price">
+                    <label for="">$49</label>
+                </div>
+            </div>
+
+            <div>
+                <button class="buyButton" onclick="addToCart()">Add to Cart</button>
+            </div>
+            <!--  -->
+            <div class="smalls">
+                <small><i class="fa-solid fa-check" style="color: #306acf;"></i><span>Quality checked by ThemeWagon Team</span> </small><br>
+                <small><i class="fa-solid fa-check" style="color: #306acf;"></i><span> 6 months technical support</span></small><br>
+                <small><i class="fa-solid fa-check" style="color: #306acf;"></i> <span>Life time free updates</span></small><br>
+                <small><i class="fa-solid fa-star" style="color: #2f64c1;"></i> <span>100% money back guarantee</span></small>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <hr>
+                <p><i class="fa-solid fa-download" style="color: #4f4f4f;"></i> <span style="font-weight: 600;" id="templateDownload"></span> download</p>
+            </div> 
+        </div>
+      <!-- license side -->
+        <div class="version">
+          <small>Version: <span id="templateVersion"></span></small>
+          <hr>
+          <small>Update Date: <span id="templateUpdate">3 months ago</span></small>
+          <hr>
+          <small> Category: <span id="templateFrameworks">Landing & Website</span></small>
+          <hr>
+          <small> Frameworks:<span  id="templateCategory" ></span></small>
+        </div>
+        
+        <div>
+            <h3>Subscribe for free</h3>
+            <input type="text" placeholder="Enter email" class="free-email">
+            <input type="button" value="Free Download" id="free" class="free-btn">
+        </div>
+
+        <div >
+            <img src="logo3.png" alt="" width="150" class="footer-img">
+        </div>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

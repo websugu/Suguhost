@@ -1,0 +1,137 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.temps-grid{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 0fr 350px;
+   column-gap: 60px;
+   align-items:baseline;margin-top: 50px;
+}
+
+.license-border{
+    border: 1px solid rgb(183, 181, 181);
+    width: fit-content;height: fit-content;
+    padding: 0px 20px;border-radius: 10px;
+}
+.options{
+    display: flex;
+    margin-top: 20px;
+}
+
+.options-price{
+    padding-left: 70px;
+}
+label{
+    font-size: 19px;font-weight: 600;
+    margin-left: 10px;color: rgb(56, 55, 55);
+}
+.buyButton{
+    padding: 10px 110px;font-size: 15px;font-weight: 600;background-color: blue;
+    margin-top: 40px;color: white;border-radius: 5px;border: none;cursor: pointer;margin-bottom: 20px;
+    
+}.buyButton:hover{
+    background-color: rgb(7, 7, 236);color: white;
+}
+.template-details{
+    border: 1px solid rgb(183, 181, 181);border-radius: 10px;
+    width: fit-content;height: fit-content;
+    padding: 20px 20px;
+}.description{
+    
+}
+.smalls{
+    line-height: 25px;
+}.smalls span{padding-left: 10px;}
+
+.list ul li{
+    padding-top: 15px;
+}
+.social i{
+    font-size: 25px;padding: 15px;
+}
+.version small{
+    line-height: 40px;
+    font-weight: 600;color: rgb(50, 49, 49);
+}.version{
+    margin-top: 20px;
+}.version span{
+    float: right;color: #748194;font-weight: 400;
+}.free-email{
+    font-size: 16px;height: 30px;border-radius: 3px;border:2px solid gray;padding-left: 10px;
+}.free-btn{
+    font-size:15px ;padding: 8.80px;border-radius: 4px;font-weight: 600;cursor: pointer;border: none;background-color: rgb(42, 40, 40);color: white;
+}
+.none{}
+@media (max-width: 1300px) {
+    .details-temps-img{width: 100%;}
+    .template-details h3{font-size: 13px;}
+    .temps-grid{
+        display:block;
+        justify-content: center;
+        grid-template-columns: 0fr 350px;
+       column-gap: 60px;
+       align-items:center;
+       max-width: 90%;margin: auto;
+    }
+    .description h1{font-size: 20px;}
+   
+    .license-border{
+        border: 1px solid rgb(183, 181, 181);
+        width: 89%;height: fit-content;
+        padding: 0px 20px;border-radius: 10px;
+    }
+    .options{
+        display: flex;
+        margin-top: 20px;
+    }
+    
+    .options-price{
+        padding-left: 100px;
+    }
+    label{
+        font-size: 19px;font-weight: 600;
+        margin-left: 10px;color: rgb(56, 55, 55);
+    }
+    .buyButton{
+        padding: 10px 110px;font-size: 15px;font-weight: 600;background-color: blue;width: 100%;
+        margin-top: 40px;color: white;border-radius: 5px;border: none;cursor: pointer;margin-bottom: 20px;
+        
+    }.buyButton:hover{
+        background-color: rgb(7, 7, 236);color: white;
+    }
+    .template-details{
+        border: 1px solid rgb(183, 181, 181);border-radius: 10px;
+        width: fit-content;height: fit-content;
+        padding: 20px 20px;max-width: 100%;
+    }.description{
+        
+    }
+    .smalls{
+        line-height: 25px;
+    }.smalls span{padding-left: 10px;}
+    
+    .list ul li{
+        padding-top: 15px;
+    }
+    .social i{
+        font-size: 25px;padding: 15px;
+    }
+    .version small{
+        line-height: 40px;
+        font-weight: 600;color: rgb(50, 49, 49);
+    }.version{
+        margin-top: 20px;
+    }.version span{
+        float: right;color: #748194;font-weight: 400;
+    }.free-email{
+        font-size: 16px;height: 30px;border-radius: 3px;border:2px solid gray;padding-left: 10px;
+    }.free-btn{
+        font-size:15px ;padding: 8.80px;border-radius: 4px;font-weight: 600;cursor: pointer;border: none;background-color: rgb(42, 40, 40);color: white;
+    }
+    #hide{display: block;margin-top: 20px;}
+    
+}
