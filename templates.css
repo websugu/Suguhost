@@ -65,7 +65,7 @@ label{
 }.free-btn{
     font-size:15px ;padding: 8.80px;border-radius: 4px;font-weight: 600;cursor: pointer;border: none;background-color: rgb(42, 40, 40);color: white;
 }
-.none{}
+
 @media (max-width: 1300px) {
     .details-temps-img{width: 100%;}
     .template-details h3{font-size: 13px;}
